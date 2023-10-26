@@ -1,0 +1,113 @@
+$gray: #667085;
+$primary: #0788F5;
+$error: #F04438;
+$warning: #F79009;
+$success: #17B26A;
+
+$left-sidebar-width: 70px;
+$right-sidebar-width: 256px;
+
+$mobile-header-size: 60px;
+$mobile-footer-size: 60px;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@font-face {
+  font-family: Eventpop;
+  src: url(../src/fonts/Eventpop/eventpop-bold.ttf);
+  font-weight: 700;
+  unicode-range: 'U+0E00–U+0E7F';
+}
+
+@font-face {
+  font-family: Eventpop;
+  src: url(../src/fonts/Eventpop/eventpop-medium.ttf);
+  font-weight: 500;
+  unicode-range: 'U+0E00–U+0E7F';
+}
+
+@font-face {
+  font-family: Sukhumvit Set;
+  src: url(../src/fonts/Sukhumvit-set/SukhumvitSet-Bold.ttf);
+  font-weight: 700;
+  unicode-range: 'U+0E00–U+0E7F';
+}
+
+@font-face {
+  font-family: Sukhumvit Set;
+  src: url(../src/fonts/Sukhumvit-set/SukhumvitSet-SemiBold.ttf);
+  font-weight: 600;
+  unicode-range: 'U+0E00–U+0E7F';
+}
+
+@font-face {
+  font-family: Sukhumvit Set;
+  src: url(../src/fonts/Sukhumvit-set/SukhumvitSet-Medium.ttf);
+  font-weight: 500;
+  unicode-range: 'U+0E00–U+0E7F';
+}
+
+@font-face {
+  font-family: Sukhumvit Set;
+  src: url(../src/fonts/Sukhumvit-set/SukhumvitSet-Text.ttf);
+  font-weight: 400;
+  unicode-range: 'U+0E00–U+0E7F';
+}
+
+@font-face {
+  font-family: Sukhumvit Set;
+  src: url(../src/fonts/Sukhumvit-set/SukhumvitSet-Light.ttf);
+  font-weight: 300;
+  unicode-range: 'U+0E00–U+0E7F';
+}
+
+@font-face {
+  font-family: Sukhumvit Set;
+  src: url(../src/fonts/Sukhumvit-set/SukhumvitSet-Thin.ttf);
+  font-weight: 200;
+  unicode-range: 'U+0E00–U+0E7F';
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cal Sans';
+  src: url('./fonts/Cal sans/CalSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+body {
+  overflow-y:scroll;
+  font-family:'Inter', sans-serif
+}
+
+.cal-sans {
+  font-family:'Cal Sans', sans-serif
+}
+
+.sukhumvit {
+  font-family:'Sukhumvit Set', sans-serif
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: white
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius:99px;
+  &:hover {
+    background: #555;
+  }
+}

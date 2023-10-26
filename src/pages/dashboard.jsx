@@ -26,17 +26,67 @@ import appStoreSvg from "../img/appStoreSvg.svg";
 import tutorialsSvg from "../img/tutorialsSvg.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button"
+import ImageCard from "../components/imagecard";
 
 export default function Dashboard({loadingLogo}){
   const [isOpen, setIsOpen] = useState(false);
   const [openEditShortcuts, setOpenEditShortcuts] = useState(false)
 
+  const dashboardInfo = [
+    {
+      title: 'Start Working',
+      icon: startWorkingSvg,
+      description: 'Go to your business app',
+      background: startWorking,
+    },
+    {
+      title: 'Apps Marketplace',
+      icon: appStoreSvg,
+      description: 'See more at AppStore',
+      background: appsMarketplace,
+    },
+    {
+      title: 'Watch Tutorials',
+      icon: tutorialsSvg,
+      description: 'Learn Zaviago/OS',
+      background: watchTutorials,
+    },
+  ];
+
   return (
-    <>
+    <div className="page-section dashboard-container">
       <div className="flex justify-between items-center">
-        <h1>Welcome, Suttirak 🙏</h1>
+        <h1 className="cal-sans main-heading">Welcome, Suttirak 🙏</h1>
         <Button variant='default'>Login as Admin</Button>
       </div>
-    </>
+
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 mt-5">
+        {dashboardInfo.map((info) => (
+          <ImageCard title={info.title} background={info.background} icon={info.icon} description={info.description}/>
+        ))}
+      </div>
+
+      <div className="flex items-center border border-[#E3E3E3] rounded-lg py-3 mt-5">
+        <div className="flex px-5 gap-x-1">
+          <p className="text-xs text-[#475467]">Free plan</p>
+          <a href="#" className="text-xs text-[#0788F5] font-bold">Compare Plans</a>
+        </div>
+        <div className='border-l border-l-[#E3E3E3] h-5'></div>
+        <div className="flex px-5 gap-x-1">
+          <p className="text-xs text-[#475467]">No domain</p>
+          <a href="#" className="text-xs text-[#0788F5] font-bold">Connect</a>
+        </div>
+        <div className='border-l border-l-[#E3E3E3] h-5'></div>
+        <div className="flex px-5 gap-x-1">
+          <p className="text-xs text-[#475467]">No business email</p>
+          <a href="#" className="text-xs text-[#0788F5] font-bold">Connect</a>
+        </div>
+        <div className='border-l border-l-[#E3E3E3] h-5'></div>
+        <a href="#" className="flex px-5 gap-x-1 items-center">
+          <Cog6ToothIcon width='20' />
+          <p className="text-xs text-[#475467]">Business Info</p>
+        </a>
+      </div>
+    </div>
   )
 }

@@ -33,7 +33,10 @@ export default function Dashboard({loadingLogo}){
 
   return (
     <>
-      <Button>Test</Button>
+      <div className="flex justify-between items-center">
+        <h1>Welcome, Suttirak 🙏</h1>
+        <Button variant='default'>Login as Admin</Button>
+      </div>
     </>
   )
 }

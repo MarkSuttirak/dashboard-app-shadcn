@@ -27,6 +27,8 @@ import tutorialsSvg from "../img/tutorialsSvg.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button"
 import ImageCard from "../components/imagecard";
+import VerticalLine from "../components/verticalLine"
+import { Progress } from "radix-ui";
 
 export default function Dashboard({loadingLogo}){
   const [isOpen, setIsOpen] = useState(false);
@@ -71,21 +73,32 @@ export default function Dashboard({loadingLogo}){
           <p className="text-xs text-[#475467]">Free plan</p>
           <a href="#" className="text-xs text-[#0788F5] font-bold">Compare Plans</a>
         </div>
-        <div className='border-l border-l-[#E3E3E3] h-5'></div>
+        <VerticalLine color='#E3E3E3' size={1} height={20}/>
         <div className="flex px-5 gap-x-1">
           <p className="text-xs text-[#475467]">No domain</p>
           <a href="#" className="text-xs text-[#0788F5] font-bold">Connect</a>
         </div>
-        <div className='border-l border-l-[#E3E3E3] h-5'></div>
+        <VerticalLine color='#E3E3E3' size={1} height={20}/>
         <div className="flex px-5 gap-x-1">
           <p className="text-xs text-[#475467]">No business email</p>
           <a href="#" className="text-xs text-[#0788F5] font-bold">Connect</a>
         </div>
-        <div className='border-l border-l-[#E3E3E3] h-5'></div>
+        <VerticalLine color='#E3E3E3' size={1} height={20}/>
         <a href="#" className="flex px-5 gap-x-1 items-center">
           <Cog6ToothIcon width='20' />
           <p className="text-xs text-[#475467]">Business Info</p>
         </a>
+      </div>
+
+      <div className="mt-9 flex justify-between items-start">
+        <div>
+          <h2 className="text-[#344054] subheading cal-sans">Site Setup</h2>
+          <div className="flex gap-x-2 items-center">
+            <p className="text-desc text-[#475467]">7 steps to go</p>
+            <Progress value={20} />
+          </div>
+        </div>
+        <Button variant='ghost'>View All (7)</Button>
       </div>
     </div>
   )

@@ -105,18 +105,29 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background:#888;
   border-radius:99px;
-  &:hover {
-    background: #555;
-  }
+  &:hover {background:#555;}
 }
 
 .main-heading {
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 38px;
+  font-size:24px;
+  font-style:normal;
+  font-weight:600;
+  line-height:38px;
+}
+
+.subheading {
+  font-size:16px;
+  font-style:normal;
+  font-weight:600;
+  line-height:28px;
+  letter-spacing:0.4px;
+}
+
+.text-desc {
+  font-size:14px;
+  line-height:24px;
 }
 
 .page-section {

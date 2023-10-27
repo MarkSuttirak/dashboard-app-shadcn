@@ -112,6 +112,10 @@ body {
   &:hover {background:#555;}
 }
 
+.btn-image-shadow {
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.10);
+}
+
 .main-heading {
   font-size:24px;
   font-style:normal;

@@ -2,7 +2,7 @@ import './App.scss'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Dashboard from './pages/dashboard'
 import DashboardNew from './pages/dashboardnew'
-import Settings from './pages/settings'
+import Settings from './pages/settings/settings'
 import { SelectForm } from './pages/test'
 
 export default function App() {
@@ -11,7 +11,7 @@ export default function App() {
       <Routes>
         <Route path='/old' element={<Dashboard />}/>
         <Route path='/' element={<DashboardNew />}/>
-        <Route path="/settings" element={<Settings />}/>
+        <Route path="/settings/:id" element={<Settings />}/>
         <Route path="/test" element={<SelectForm />}/>
       </Routes>
     </BrowserRouter>

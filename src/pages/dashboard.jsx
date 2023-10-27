@@ -57,18 +57,18 @@ export default function Dashboard({loadingLogo}){
 
   return (
     <div className="page-section dashboard-container">
-      <div className="flex justify-between items-center">
+      <section className="flex justify-between items-center">
         <h1 className="cal-sans main-heading">Welcome, Suttirak 🙏</h1>
         <Button variant='default'>Login as Admin</Button>
-      </div>
+      </section>
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 mt-5">
+      <section className="grid grid-cols-1 gap-4 sm:grid-cols-3 mt-5">
         {dashboardInfo.map((info) => (
           <ImageCard title={info.title} background={info.background} icon={info.icon} description={info.description}/>
         ))}
-      </div>
+      </section>
 
-      <div className="flex items-center border border-[#E3E3E3] rounded-lg py-3 mt-5">
+      <section className="flex items-center border border-[#E3E3E3] rounded-lg py-3 mt-5">
         <div className="flex px-5 gap-x-1">
           <p className="text-xs text-[#475467]">Free plan</p>
           <a href="#" className="text-xs text-[#0788F5] font-bold">Compare Plans</a>
@@ -88,9 +88,9 @@ export default function Dashboard({loadingLogo}){
           <Cog6ToothIcon width='20' />
           <p className="text-xs text-[#475467]">Business Info</p>
         </a>
-      </div>
+      </section>
 
-      <div className="mt-9 flex justify-between items-start">
+      <section className="mt-9 flex justify-between items-start">
         <div>
           <h2 className="text-[#344054] subheading cal-sans">Site Setup</h2>
           <div className="flex gap-x-2 items-center">
@@ -99,7 +99,35 @@ export default function Dashboard({loadingLogo}){
           </div>
         </div>
         <Button variant='ghost'>View All (7)</Button>
-      </div>
+      </section>
+
+      <section className="bg-[#0788F5] text-white p-5 rounded-lg mt-4">
+        <h2 className="text-white cal-sans">Connect a custom domain</h2>
+        <p className="text-white text-xs">Get a unique address for your site</p>
+
+        <div className="flex justify-end">
+          <Button variant='white'>Connect domain</Button>
+        </div>
+      </section>
+
+      <section className="mt-[50px]">
+        <div className="sm:flex justify-between items-center">
+          <div className="flex items-center">
+            <img src={workSpaceLogo} className="h-[22px] w-[22px]" alt={workSpaceLogo} />
+            <p className="font-calSans text-[15px] font-semibold ml-2">Your Workspace</p>
+            <div className="ml-4 flex-shrink-0">
+              <span className={`bg-emerald-50 online inline-flex items-center rounded-full px-3 py-0.5 text-sm font-medium`}> {/* ${sites?.site_list[0].status === "Active" ? "bg-emerald-50 online" : "bg-red-50"} */}
+                <svg className="-ml-1 mr-1.5 h-2 w-2" fill="#52C41A" viewBox="0 0 8 8"> {/* {sites?.site_list[0].status === "Active" ? "#52C41A" : "#F5222D"} */}
+                  <circle cx={4} cy={4} r={3} />
+                </svg>
+                Active
+                {/* {sites?.site_list[0].status} */}
+              </span>
+            </div>
+          </div>
+          <p className="cal-sans font-semibold text-xs">Powered by</p>
+        </div>
+      </section>
     </div>
   )
 }

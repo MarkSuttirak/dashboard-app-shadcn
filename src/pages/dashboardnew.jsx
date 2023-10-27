@@ -140,7 +140,7 @@ export default function DashboardNew(){
 
         <div className="flex gap-x-[15px] mt-6">
           {newOrManageMenus.map((n) => (
-            <div className="w-[142px] rounded-xl flex flex-col justify-center items-center w-[142px] h-[150px] text-sm font-medium" style={{backgroundColor:n.background,color:n.color}}>
+            <div className="py-6 w-[142px] rounded-xl flex flex-col justify-between items-center w-[142px] h-[150px] text-sm font-medium" style={{backgroundColor:n.background,color:n.color}}>
               {n.image}
               {n.title}
             </div>

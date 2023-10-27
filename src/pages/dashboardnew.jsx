@@ -64,6 +64,23 @@ export default function DashboardNew(){
       </Card>
     )
   }
+
+  const PostInfo = ({title, desc, buttonText, onClick, image}) => {
+    return (
+      <div className="p-6 bg-zinc-100 rounded-xl h-[423px] flex flex-col justify-between">
+        <div>
+          <h3 className="secondary-heading">{title}</h3>
+          <p className="text-[13px] text-zinc-500 font-medium leading-4 mt-4 mb-6">{desc}</p>
+
+          <Button variant="blue" className='rounded-xl flex items-center gap-x-2 text-xs font-medium leading-5' onClick={onClick}>
+            <PlusCircledIcon />
+            {buttonText}
+          </Button>
+        </div>
+        <img src={image} className="w-fit mx-auto"/>
+      </div>
+    )
+  }
   return (
     <div className="dashboard-container page-section">
       <section className="flex justify-between">
@@ -138,42 +155,9 @@ export default function DashboardNew(){
         <p className="secondary-desc">Manage posts, track post performance and learn about new ways to improve your blog.</p>
 
         <div className="mt-6 grid grid-cols-3 gap-x-[15px]">
-          <div className="p-6 bg-zinc-100 rounded-xl h-[423px] flex flex-col justify-between">
-            <div>
-              <h3 className="secondary-heading">Create your blog</h3>
-              <p className="text-[13px] text-zinc-500 font-medium leading-4 mt-4 mb-6">Say hello to the world and let readers know what your blog is all about.</p>
-
-              <Button variant="blue" className='rounded-xl flex items-center gap-x-2 text-xs font-medium leading-5'>
-                <PlusCircledIcon />
-                New post
-              </Button>
-            </div>
-            <img src={phoneBanner}/>
-          </div>
-          <div className="p-6 bg-zinc-100 rounded-xl h-[423px] flex flex-col justify-between">
-            <div>
-              <h3 className="secondary-heading">Create your blog</h3>
-              <p className="text-[13px] text-zinc-500 font-medium leading-4 mt-4 mb-6">Say hello to the world and let readers know what your blog is all about.</p>
-
-              <Button variant="blue" className='rounded-xl flex items-center gap-x-2 text-xs font-medium leading-5'>
-                <PlusCircledIcon />
-                New post
-              </Button>
-            </div>
-            <img src={sellingOnline} className="w-fit mx-auto"/>
-          </div>
-          <div className="p-6 bg-zinc-100 rounded-xl h-[423px] flex flex-col justify-between">
-            <div>
-              <h3 className="secondary-heading">Create your blog</h3>
-              <p className="text-[13px] text-zinc-500 font-medium leading-4 mt-4 mb-6">Say hello to the world and let readers know what your blog is all about.</p>
-
-              <Button variant="blue" className='rounded-xl flex items-center gap-x-2 text-xs font-medium leading-5'>
-                <PlusCircledIcon />
-                New post
-              </Button>
-            </div>
-            <img src={connectMessage} className="w-fit mx-auto"/>
-          </div>
+          <PostInfo title="Create your blog" desc="Say hello to the world and let readers know what your blog is all about." buttonText="New post" image={phoneBanner} />
+          <PostInfo title="Selling Online" desc="Say hello to the world and let readers know what your blog is all about." buttonText="New post" image={sellingOnline} />
+          <PostInfo title="Connect Shopee" desc="Say hello to the world and let readers know what your blog is all about." buttonText="New post" image={connectMessage} />
         </div>
       </section>
     </div>

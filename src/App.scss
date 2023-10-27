@@ -3,6 +3,8 @@ $primary: #0788F5;
 $error: #F04438;
 $warning: #F79009;
 $success: #17B26A;
+$primary-color: #09090B;
+$secondary-color: #71717A;
 
 $left-sidebar-width: 70px;
 $right-sidebar-width: 256px;
@@ -113,21 +115,27 @@ body {
 .main-heading {
   font-size:24px;
   font-style:normal;
-  font-weight:600;
-  line-height:38px;
+  font-weight:700;
+  line-height:32px;
+  color:$primary-color;
 }
 
 .subheading {
-  font-size:16px;
-  font-style:normal;
-  font-weight:600;
-  line-height:28px;
-  letter-spacing:0.4px;
+  font-size:14px;
+  line-height:20px;
+  color:$primary-color
 }
 
 .text-desc {
-  font-size:14px;
-  line-height:24px;
+  font-size:12px;
+  line-height:16px;
+  color:$secondary-color
+}
+
+.btn-with-icon {
+  display:flex;
+  gap:8px;
+  align-items:center;
 }
 
 .page-section {
@@ -137,11 +145,17 @@ body {
 }
 
 .dashboard-container {
-  max-width:800px;
+  max-width:1100px;
   margin:auto;
 }
 
 .online {
-  color: #118253;
-  font-size: 13px;
+  color:#118253;
+  font-size:13px;
+  font-weight:500;
+}
+
+.link-anchor {
+  color: #888;
+  text-decoration: underline
 }

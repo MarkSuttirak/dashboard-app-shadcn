@@ -4,12 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.scss'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Dashboard from './pages/dashboard'
+import DashboardNew from './pages/dashboardnew'
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Dashboard />}/>
+        <Route path='/old' element={<Dashboard />}/>
+        <Route path='/' element={<DashboardNew />}/>
       </Routes>
     </BrowserRouter>
   )

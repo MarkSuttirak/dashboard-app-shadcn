@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Dashboard from './pages/dashboard'
 import DashboardNew from './pages/dashboardnew'
 import Settings from './pages/settings/settings'
-import { SelectForm } from './pages/test'
+import Test from './pages/test'
 
 export default function App() {
   return (
@@ -12,7 +12,7 @@ export default function App() {
         <Route path='/old' element={<Dashboard />}/>
         <Route path='/' element={<DashboardNew />}/>
         <Route path="/settings/:id" element={<Settings />}/>
-        <Route path="/test" element={<SelectForm />}/>
+        <Route path="/test" element={<Test />}/>
       </Routes>
     </BrowserRouter>
   )
